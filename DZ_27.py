@@ -14,13 +14,9 @@ class DigitalCounter:
             self.current_value += 1
             return self.current_value
         else:
-            return "Выходит за пределы max границы"
+            return "Выходит за пределы max границы отсчета"
 
 
-data = DigitalCounter(0, 5)
-print(data.count())
-print(data.count())
-print(data.count())
-print(data.count())
-print(data.count())
-print(data.count())
+data = DigitalCounter(0, 10)
+for _ in range(data.min_value, data.max_value + 1):
+    print(data.count())
